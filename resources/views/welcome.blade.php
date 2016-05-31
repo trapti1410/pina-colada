@@ -35,7 +35,7 @@
             }
         </style>
 
-	<link rel="stylesheet" type="text/css" href="{{ elixir("css/app.css", "pina-colada/assets") }}">
+	<link rel="stylesheet" type="text/css" href="{{ assetPath("css/app.css") }}">
     </head>
     <body>
         <div class="container">
@@ -43,6 +43,6 @@
                 <div class="title">Laravel 5</div>
             </div>
         </div>
-	<link rel="stylesheet" type="text/css" href="{{ elixir("js/app.js", "pina-colada/assets") }}">
+	<link rel="stylesheet" type="text/css" href="{{ assetPath("js/app.js") }}">
     </body>
 </html>

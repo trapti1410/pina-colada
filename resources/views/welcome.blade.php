@@ -34,6 +34,8 @@
                 font-size: 96px;
             }
         </style>
+
+	<link rel="stylesheet" type="text/css" href="{{ elixir("css/app.css", "pina-colada/assets") }}">
     </head>
     <body>
         <div class="container">

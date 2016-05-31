@@ -5,5 +5,9 @@ elixir(function(mix) {
 });
 
 elixir(function(mix) {
-    mix.version(["css/app.css", "images"], "public/pina-colada/assets");
+    mix.browserify("app.js");
+});
+
+elixir(function(mix) {
+    mix.version(["js/app.js", "css/app.css", "images"], "public/pina-colada/assets");
 });

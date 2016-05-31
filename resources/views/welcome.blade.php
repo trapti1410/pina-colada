@@ -43,5 +43,6 @@
                 <div class="title">Laravel 5</div>
             </div>
         </div>
+	<link rel="stylesheet" type="text/css" href="{{ elixir("js/app.js", "pina-colada/assets") }}">
     </body>
 </html>

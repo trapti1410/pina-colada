@@ -13,7 +13,7 @@ QUEUE_DRIVER=sync
 EOF
 
 # Move this into black knight
-cat > config/php/quintype_upstream.conf <<EOF
+cat > /etc/nginx/sites-enabled/quintype_upstream.conf <<EOF
 upstream quintype_upstream {
   server sketches.quintype.com;
 }

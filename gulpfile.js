@@ -1,6 +1,7 @@
 var gulp = require("gulp");
 var elixir = require('laravel-elixir');
 var deletePath = require("del");
+var shell = require("gulp-shell")
 
 var destination = "pina-colada/assets";
 var tempPath = "tmp/asset";
@@ -19,6 +20,14 @@ elixir(function(mix) {
     mix.copy("resources/assets/images", tempPath);
 });
 
+
+gulp.task("copy-public", function() {
+    gulp.src("")
+        .pipe(shell("rm -rf public/" + destination))
+        .pipe(shell("mkdir -p public/" + destination))
+        .pipe(shell("rsync -a tmp/asset/" + destination  + "/ public/" + destination));
+});
+
 elixir(function(mix) {
     mix.version([
       "application.js",
@@ -29,7 +38,5 @@ elixir(function(mix) {
       "**/*.svg"
     ], tempPath + "/" + destination);
 
-    var paths = new elixir.GulpPaths().src(tempPath + "/" + destination).output("public/" + destination);
-    deletePath.sync(paths.output.path);
-    return gulp.src(paths.src.path).pipe(gulp.dest(paths.output.path))
+   mix.task("copy-public");
 });

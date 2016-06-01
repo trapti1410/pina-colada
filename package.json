@@ -5,10 +5,8 @@
     "dev": "gulp watch"
   },
   "devDependencies": {
-    "del": "^2.2.0",
     "gulp": "^3.9.1",
     "gulp-shell": "^0.5.2",
-    "laravel-elixir": "^5.0.0",
-    "notify-send": "^0.1.2"
+    "laravel-elixir": "^5.0.0"
   }
 }

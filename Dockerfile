@@ -18,3 +18,5 @@ RUN npm install
 RUN ./node_modules/.bin/gulp --production
 
 RUN chown -R www-data.www-data /app
+
+CMD ["./docker/start-in-container.sh"]

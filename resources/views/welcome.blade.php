@@ -35,7 +35,7 @@
             }
         </style>
 
-	<link rel="stylesheet" type="text/css" href="{{ assetPath("css/app.css") }}">
+	<link rel="stylesheet" type="text/css" href="{{ assetPath("application.css") }}">
     </head>
     <body>
         <div class="container">
@@ -43,6 +43,6 @@
                 <div class="title">Laravel 5</div>
             </div>
         </div>
-	<link rel="stylesheet" type="text/css" href="{{ assetPath("js/app.js") }}">
+	<link rel="stylesheet" type="text/css" href="{{ assetPath("application.js") }}">
     </body>
 </html>

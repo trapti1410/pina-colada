@@ -1,6 +1,8 @@
+var gulp = require("gulp");
 var elixir = require('laravel-elixir');
+var deletePath = require("del");
 
-var destination = "public/pina-colada/assets";
+var destination = "pina-colada/assets";
 var tempPath = "tmp/asset";
 
 elixir.config.publicPath = tempPath;
@@ -25,5 +27,9 @@ elixir(function(mix) {
       "**/*.jpg",
       "**/*.png",
       "**/*.svg"
-    ], destination);
+    ], tempPath + "/" + destination);
+
+    var paths = new elixir.GulpPaths().src(tempPath + "/" + destination).output("public/" + destination);
+    deletePath.sync(paths.output.path);
+    return gulp.src(paths.src.path).pipe(gulp.dest(paths.output.path))
 });

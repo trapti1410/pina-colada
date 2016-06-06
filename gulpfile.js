@@ -1,6 +1,5 @@
 var gulp = require("gulp");
 var elixir = require('laravel-elixir');
-var deletePath = require("del");
 var shell = require("gulp-shell")
 
 var destination = "pina-colada/assets";

@@ -4,9 +4,18 @@
     "prod": "gulp --production",
     "dev": "gulp watch"
   },
+  "browserify": { 
+    "transform": [ 
+      ["twigify", {"transform": "transformTemplates"}]
+    ] 
+  },
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-shell": "^0.5.2",
-    "laravel-elixir": "^5.0.0"
+    "laravel-elixir": "^5.0.0",
+    "twigify": "git://github.com/gja/twigify#allow-transforms"
+  },
+  "dependencies": {
+    "lodash": "^4.13.1"
   }
 }

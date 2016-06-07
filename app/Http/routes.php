@@ -16,3 +16,5 @@ Route::get('/', 'HomeController@index');
 Route::get('/ping', function () {
     return 'pong';
 });
+
+Route::get('/preview/home', 'PreviewController@home');

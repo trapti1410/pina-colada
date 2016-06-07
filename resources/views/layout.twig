@@ -2,9 +2,10 @@
 <html>
   <head>
     <title>Quintype Sample App</title>
-    <link rel="stylesheet" type="text/css" href="{{ assetPath("application.css") }}">
+    <link rel="stylesheet" type="text/css" href="{{ assetPath("application.css") }}"/>
   </head>
   <body>
+    <script type="text/javascript">var qtReady = qtReady || [];</script>
     <div class="body-container">
       <div class="layout-menu">
 	{% block menu %}
@@ -16,12 +17,15 @@
 	{% endblock %}
       </div>
       <div class="layout-content">
-	<div class="container">
+	<div id="container">
 	  {% block content %}{% endblock %}
 	</div>
       </div>
       <div class="clear"></div>
     </div>
-    <link rel="stylesheet" type="text/css" href="{{ assetPath("application.js") }}">
+    <script type="text/javascript" src="{{ assetPath("application.js") }}"></script>
+    <script type="text/javascript">
+      app.initQtReady();
+    </script>
   </body>
 </html>

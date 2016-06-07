@@ -1,13 +1,5 @@
 {% extends "layout" %}
 
 {% block content %}
-
-Here are all the stories:
-
-<ul>
-{% for story in stories %}
-{% include "home_story" with {'story': story} %}
-{% endfor %}
-</ul>
-
+{% include "/home/body" %}
 {% endblock %}

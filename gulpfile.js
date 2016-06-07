@@ -19,7 +19,6 @@ elixir(function(mix) {
     mix.copy("resources/assets/images", tempPath);
 });
 
-
 gulp.task("copy-public", function() {
     gulp.src("")
         .pipe(shell("rm -rf public/" + destination))

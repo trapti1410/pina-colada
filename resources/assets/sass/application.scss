@@ -1,7 +1,5 @@
-// @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "colors";
 
-body {
-    .foobar {
-	background-image: url("brady-bunch.jpg");
-    }
-}
+@import "layout";
+
+@import "menu";

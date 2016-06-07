@@ -1,48 +1,21 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Laravel</title>
-
-        <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
-
-        <style>
-            html, body {
-                height: 100%;
-            }
-
-            body {
-                margin: 0;
-                padding: 0;
-                width: 100%;
-                display: table;
-                font-weight: 100;
-                font-family: 'Lato';
-            }
-
-            .container {
-                text-align: center;
-                display: table-cell;
-                vertical-align: middle;
-            }
-
-            .content {
-                text-align: center;
-                display: inline-block;
-            }
-
-            .title {
-                font-size: 96px;
-            }
-        </style>
-
-	<link rel="stylesheet" type="text/css" href="{{ assetPath("application.css") }}">
-    </head>
-    <body>
-        <div class="container">
-            <div class="content">
-                <div class="title">Laravel 5</div>
-            </div>
-        </div>
-	<link rel="stylesheet" type="text/css" href="{{ assetPath("application.js") }}">
-    </body>
+  <head>
+    <title>Quintype Sample App</title>
+    <link rel="stylesheet" type="text/css" href="{{ assetPath("application.css") }}">
+  </head>
+  <body>
+    <div class="body-container">
+      <div class="layout-menu">
+	Foo
+      </div>
+      <div class="layout-content">
+	<div class="container">
+	  Bar
+	</div>
+      </div>
+      <div class="clear"></div>
+    </div>
+    <link rel="stylesheet" type="text/css" href="{{ assetPath("application.js") }}">
+  </body>
 </html>

@@ -7,17 +7,17 @@
   <body>
     <div class="body-container">
       <div class="layout-menu">
-	@section('menu')
+	{% block menu %}
 	<ul>
-	@foreach($config->menuItems() as $menu)
-	<li><a href="{{$menu->url()}}">{{$menu->title()}}</a></li>
-	@endforeach
+	  {% for menuItem in config.menuItems() %}
+	  <li><a href="{{menuItem.url()}}">{{menuItem.title()}}</a></li>
+	  {% endfor %}
 	</ul>
-	@show
+	{% endblock %}
       </div>
       <div class="layout-content">
 	<div class="container">
-	  @yield('content')
+	  {% block content %}{% endblock %}
 	</div>
       </div>
       <div class="clear"></div>

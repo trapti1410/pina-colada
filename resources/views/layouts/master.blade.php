@@ -8,7 +8,11 @@
     <div class="body-container">
       <div class="layout-menu">
 	@section('menu')
-	  This is the menu
+	<ul>
+	@foreach($config->menuItems() as $menu)
+	<li><a href="{{$menu->url()}}">{{$menu->title()}}</a></li>
+	@endforeach
+	</ul>
 	@show
       </div>
       <div class="layout-content">

@@ -3,5 +3,5 @@
 return [
     "publisher-name" => "pina-colada",
     "asset-host" => "",
-    "api-host" => "https://sketches.quintype.com"
+    "api-host" => "http://sketches.quintype.com"
 ];

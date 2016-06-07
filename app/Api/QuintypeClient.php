@@ -2,43 +2,41 @@
 
 namespace App\Api;
 
+use ArrayObject;
 use GuzzleHttp\Client;
 use Log;
 
-class MenuItem
+class MenuItem extends ArrayObject
 {
-    public function __construct($hash, $config)
-    {
-        $this->hash = $hash;
+    public function __construct($hash, $config) {
+        parent::__construct($hash);
         $this->config = $config;
     }
 
-    public function title()
-    {
-        Log::info($this->hash);
-        return $this->hash["title"];
+    public function title() {
+        return $this["title"];
     }
 
-    public function url()
-    {
-        switch($this->hash["item-type"]) {
-        case "section": return "/section/" . $this->hash["section-slug"];
+    public function url() {
+        switch($this["item-type"]) {
+        case "section": return "/section/" . $this["section-slug"];
         default: return "#";
         }
     }
 }
 
-class Config
+class Config extends ArrayObject
 {
-    public function __construct($hash) {
-        $this->hash = $hash;
-    }
-
     public function menuItems() {
         return array_map(function($menu) {
             return new MenuItem($menu, $this);
-        }, $this->hash["layout"]["menu"]);
+        }, $this["layout"]["menu"]);
     }
+}
+
+class Story extends ArrayObject
+{
+
 }
 
 class QuintypeClient
@@ -55,5 +53,11 @@ class QuintypeClient
 
     public function config() {
         return new Config($this->getResponse("/api/v1/config"));
+    }
+
+    public function stories() {
+        return array_map(function ($s) {
+            return new Story($s);
+        }, $this->getResponse("/api/v1/stories")["stories"]);
     }
 }

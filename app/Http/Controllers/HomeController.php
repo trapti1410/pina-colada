@@ -9,6 +9,6 @@ class HomeController extends QuintypeController
 {
     public function index()
     {
-        return view('home', $this->toView([]));
+        return view('home', $this->toView(["stories" => $this->client->stories()]));
     }
 }

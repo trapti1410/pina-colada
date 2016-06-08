@@ -1,7 +1,5 @@
-Here are the top stories:
-
-<ul>
+<ul class="stories-list">
 {% for story in stories %}
-{% include "/home/story" with {'story': story} %}
+<li>{% include "/home/story" with {'story': story} %}</li>
 {% endfor %}
 </ul>

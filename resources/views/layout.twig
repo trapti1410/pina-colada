@@ -23,6 +23,11 @@
       </div>
       <div class="clear"></div>
     </div>
+    <script type="text/javascript">
+      var qtConfig = {
+        "image-cdn": "{{config("quintype.image-cdn")}}"
+      };
+    </script>
     <script type="text/javascript" src="{{ assetPath("application.js") }}"></script>
     <script type="text/javascript">
       app.initQtReady();

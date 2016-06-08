@@ -5,7 +5,7 @@ module.exports = function() {
     var story = event.data['story'];
     if (story) {
       document.getElementById("container").innerHTML = template.render({
-	stories: [story],
+	stories: Array(20).fill(story),
 	preview: true
       });
     }

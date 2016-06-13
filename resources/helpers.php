@@ -11,5 +11,5 @@ function assetPath($file)
 function focusedImageUrl($slug, $aspectRatio, $metadata, $opts) {
     $cdn = config("quintype.image-cdn");
     $image = new FocussedImage($slug, $metadata);
-    return $cdn . "/" . $slug . $image->path($aspectRatio, $opts);
+    return $cdn . "/" . $image->path($aspectRatio, $opts);
 }

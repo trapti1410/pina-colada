@@ -62,6 +62,6 @@ class FocussedImage {
             $rectOpts["rect"] = $this->imageBounds([$this->metadata["width"], $this->metadata["height"]], $aspectRatio, $this->metadata["focus-point"]);
         }
 
-        return $this->imgixPath(array_merge($rectOpts, $opts));
+        return $this->slug . $this->imgixPath(array_merge($rectOpts, $opts));
     }
 }

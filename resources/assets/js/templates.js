@@ -18,7 +18,7 @@ var TEMPLATES = {
 Twig.extendFunction("focusedImageUrl", function(slug, aspectRatio, metadata, options) {
   var cdn = global.qtConfig["image-cdn"];
   var image = new FocussedImage(slug, metadata);
-  return cdn + "/" + slug + image.path(aspectRatio, options);
+  return cdn + "/" + image.path(aspectRatio, options);
 });
 
 module.exports = window.ooga = TEMPLATES;

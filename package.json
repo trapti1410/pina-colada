@@ -18,7 +18,7 @@
     "gulp": "^3.9.1",
     "gulp-shell": "^0.5.2",
     "laravel-elixir": "^5.0.0",
-    "quintype-js": "^0.1.1",
+    "quintype-js": "^0.1.2",
     "twigify": "git://github.com/gja/twigify#allow-transforms"
   },
   "dependencies": {

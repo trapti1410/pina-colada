@@ -2,7 +2,7 @@
 
 namespace App\Api;
 
-class FocussedImage {
+class FocusedImage {
     public function __construct($slug, $metadata) {
         $this->slug = $slug;
         $this->metadata = $metadata;

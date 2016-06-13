@@ -1,6 +1,6 @@
 <?php
 
-use App\Api\FocussedImage;
+use App\Api\FocusedImage;
 
 function assetPath($file)
 {
@@ -10,6 +10,6 @@ function assetPath($file)
 
 function focusedImageUrl($slug, $aspectRatio, $metadata, $opts) {
     $cdn = config("quintype.image-cdn");
-    $image = new FocussedImage($slug, $metadata);
+    $image = new FocusedImage($slug, $metadata);
     return $cdn . "/" . $image->path($aspectRatio, $opts);
 }

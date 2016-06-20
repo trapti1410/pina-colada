@@ -24,7 +24,7 @@ You can now visit the site at [http://localhost:8000](http://localhost:8000)
 
 To compile `css` and `js` you need to run
 
-```gulp```
+`gulp`
 
 for gulp to compile your SCSS as you code, you can run `gulp watch`
 

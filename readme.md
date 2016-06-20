@@ -26,11 +26,6 @@ In order to compile assets (javascripts and CSS), you will need to run gulp.
 ./node_modules/.bin/gulp
 ```
 
-You can also run gulp in watch mode to automatically update JS and CSS as you make changes.
-```shell
-./node_modules/.bin/gulp watch
-```
-
 ### Running the app
 To get the application running, run the app as follows
 

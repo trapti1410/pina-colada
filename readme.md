@@ -28,4 +28,6 @@ To compile `css` and `js` you need to run
 
 for gulp to compile your SCSS as you code, you can run `gulp watch`
 
+### Prerequisites on Windows
 
+* Install [Git (and Git Bash)](https://git-scm.com/download/win)

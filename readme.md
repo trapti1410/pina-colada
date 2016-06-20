@@ -1,27 +1,31 @@
-# Laravel PHP Framework
+# Starter App for Quintype (Laravel)
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
+Clone the repo and pull the libraries required.
+`cd` into the the directory and run
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
+```composer install```
+which will install dependencies to the latest version according to composer.json
 
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+```npm install```
+to install javascript dependencies.
 
-## Official Documentation
+Generate a key for your environment by running,
 
-Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
+```php artisan key:generate```
 
-## Contributing
+This will update your `.env` file with a key.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
+### Running the app
+To get the application running,
 
-## Security Vulnerabilities
+```php artisan serve```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+You can now visit the site at [http://localhost:8000](http://localhost:8000)
 
-## License
+To compile `css` and `js` you need to run
 
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+`gulp`
+
+for gulp to compile your SCSS as you code, you can run `gulp watch`
+
+

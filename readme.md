@@ -10,17 +10,22 @@ which will install dependencies to the latest version according to composer.json
 to install javascript dependencies.
 
 Generate a key for your environment by running,
+
 ```php artisan key:generate```
+
 This will update your `.env` file with a key.
 
 ### Running the app
 To get the application running,
+
 ```php artisan serve```
+
 You can now visit the site at [http://localhost:8000](http://localhost:8000)
 
 To compile `css` and `js` you need to run
+
 ```gulp```
 
-for `gulp` to compile your SCSS as you code, you can run `gulp watch`
+for gulp to compile your SCSS as you code, you can run `gulp watch`
 
 

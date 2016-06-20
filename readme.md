@@ -23,12 +23,12 @@ php artisan key:generate
 ### Compiling assets
 In order to compile assets (javascripts and CSS), you will need to run gulp.
 ```shell
-gulp
+./node_modules/.bin/gulp
 ```
 
 You can also run gulp in watch mode to automatically update JS and CSS as you make changes.
 ```shell
-gulp watch
+./node_modules/.bin/gulp watch
 ```
 
 ### Running the app
@@ -40,11 +40,12 @@ php artisan serve
 
 You can now visit the site at [http://localhost:8000](http://localhost:8000)
 
-### Prerequisites on Windows
+### Prerequisites
 
+#### Windows
 * Install [Git (and Git Bash)](https://git-scm.com/download/win).
 * Install [XAMPP for Windows](https://www.apachefriends.org/index.html).
 * Install [Composer](https://getcomposer.org/doc/00-intro.md#installation-windows).
 * Install [Node and NPM](https://nodejs.org/en/)
 
-After installing all the above, please close and reopen all terminals (or just reboot your system)
+After installing all the above, please close and reopen all terminals (or just reboot your system). All the commands above can be run in "Git BASH", when launched as Administrator.

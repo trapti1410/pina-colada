@@ -3,13 +3,13 @@
 ### Setup Instructions
 
 * Follow the prerequisites for your platform (below)
-* Clone the repo and pull the libraries required.
+* Clone the repo and pull the libraries required. All future commands will be issued from inside this new directory.
 ```shell
 git clone https://github.com/quintype/pina-colada.git
-```
-* Change into the newly cloned directory, and install external libraries
-```shell
 cd pina-colada
+```
+* Install all external libraries
+```shell
 composer install # Install PHP Libraries
 npm install # Install Javascript dependencies
 ```
@@ -45,3 +45,4 @@ You can now visit the site at [http://localhost:8000](http://localhost:8000)
 * Install [Git (and Git Bash)](https://git-scm.com/download/win).
 * Install [XAMPP for Windows](https://www.apachefriends.org/index.html).
 * Install [Composer](https://getcomposer.org/doc/00-intro.md#installation-windows).
+* Install [Node and NPM](https://nodejs.org/en/)

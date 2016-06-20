@@ -1,33 +1,47 @@
 # Starter App for Quintype (Laravel)
 
-Clone the repo and pull the libraries required.
-`cd` into the the directory and run
+### Setup Instructions
 
-```composer install```
-which will install dependencies to the latest version according to composer.json
+* Follow the prerequisites for your platform (below)
+* Clone the repo and pull the libraries required.
+```shell
+git clone https://github.com/quintype/pina-colada.git
+```
+* Change into the newly cloned directory, and install external libraries
+```shell
+cd pina-colada
+composer install # Install PHP Libraries
+npm install # Install Javascript dependencies
+```
 
-```npm install```
-to install javascript dependencies.
+* Create an environment file, and a secret key for your local machine
+```shell
+cp .env.example .env
+php artisan key:generate
+```
 
-Generate a key for your environment by running,
+### Compiling assets
+In order to compile assets (javascripts and CSS), you will need to run gulp.
+```shell
+gulp
+```
 
-```php artisan key:generate```
-
-This will update your `.env` file with a key.
+You can also run gulp in watch mode to automatically update JS and CSS as you make changes.
+```shell
+gulp watch
+```
 
 ### Running the app
-To get the application running,
+To get the application running, run the app as follows
 
-```php artisan serve```
+```shell
+php artisan serve
+```
 
 You can now visit the site at [http://localhost:8000](http://localhost:8000)
 
-To compile `css` and `js` you need to run
-
-`gulp`
-
-for gulp to compile your SCSS as you code, you can run `gulp watch`
-
 ### Prerequisites on Windows
 
-* Install [Git (and Git Bash)](https://git-scm.com/download/win)
+* Install [Git (and Git Bash)](https://git-scm.com/download/win).
+* Install [XAMPP for Windows](https://www.apachefriends.org/index.html).
+* Install [Composer](https://getcomposer.org/doc/00-intro.md#installation-windows).
